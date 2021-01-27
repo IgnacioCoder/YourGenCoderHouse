@@ -1,0 +1,618 @@
+@charset "UTF-8";
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*Este main lo añadi para empujar y body al footer hacia abajo*/
+.main {
+  min-height: calc(100vh - 70px - 300px); }
+
+body {
+  min-height: 100vh;
+  position: relative; }
+
+/*------------------------------NAVBAR---------------*/
+.navbar-brand {
+  font-family: 'Sansita Swashed', cursive;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.836); }
+
+.navbar {
+  line-height: 50px; }
+
+.nav-link {
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-weight: bolder;
+  text-transform: uppercase; }
+
+.navbar-nav .nav-item:hover .nav-link {
+  color: #0eda0e;
+  transition: .3s ease-in; }
+
+.navBar {
+  flex: 1;
+  background: white;
+  /*background de la navbar para cuando pueda añadir el modo noche: background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  height: 70px;
+  line-height: 70px;
+  position: relative; }
+  .navBar ul {
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 40%;
+    display: flex; }
+  .navBar li {
+    position: relative; }
+  .navBar a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 3px;
+    font-size: 15px;
+    font-weight: bolder; }
+    .navBar a:hover {
+      color: #0eda0e;
+      transition: .3s ease-in;
+      animation-delay: 0s; }
+
+/*--------------------------Dejaré comentada esta lista desplegable, pues aún no le encuentro uso, hasta que añada los html correspondientes------------
+  .navBar ul ul{
+      position: absolute;
+      display: none;
+      width: 100px;
+      text-align: center;
+  }
+  .navBar ul ul li{
+      display: block;
+      background: rgba(0, 0, 0, 0.432);
+      border-radius: 1px;
+  }
+  .navBar ul ul li:hover{
+      background-color: rgba(0, 0, 0, 0.336);
+  }
+  .navBar ul li:hover ul{
+      display: block;
+  }
+  */
+/*--------------------------------FIN DE NAVBAR-----------------------------*/
+/* Codigo del index */
+#fondoIndex {
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  background-size: cover; }
+
+#tituloIndex {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #tituloIndex h1 {
+    font-family: 'Andika New Basic', sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+    animation: animacionBienvenido 2s ease-in; }
+
+#YourGen {
+  font-family: 'Sansita Swashed', cursive;
+  color: #fff; }
+
+@keyframes animacionBienvenido {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+#tituloIndex h2 {
+  font-style: oblique;
+  font-weight: lighter;
+  font-size: 30px;
+  margin-bottom: 40px;
+  animation: animacionSubtitulo 3s ease-in; }
+
+@keyframes animacionSubtitulo {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+#boton {
+  font-size: 56px; }
+  #boton a {
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 12px;
+    border-radius: 60px;
+    animation: animacionBoton 3.5s ease-in-out; }
+  #boton :hover {
+    background: black;
+    color: white;
+    transition: 0.4s ease-in-out;
+    animation-delay: 0s; }
+
+@keyframes animacionBoton {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/*--------------------FIN DE INDEX-----------------------*/
+/*---------------PRODUCTOS---------------*/
+#productosEncabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 27vh;
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); }
+  #productosEncabezado h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.911);
+    font-weight: bolder; }
+  #productosEncabezado h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px; }
+
+/*Esta sección va dedicada a la parte de productos*/
+.links {
+  display: flex;
+  float: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 40px; }
+  .links a {
+    text-decoration: none;
+    border-radius: 50%; }
+  .links p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin: 20px; }
+
+#ropa, #zapatos, #ofertas {
+  height: 600px;
+  width: 33vw;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: 10px; }
+
+#ropa {
+  background-image: linear-gradient(to right, rgba(255, 117, 140, 0.555) 0%, rgba(255, 126, 180, 0.562) 100%), url(../imagenes/background.jpg);
+  animation: animacioncajas 3s ease-out;
+  animation-delay: 0s; }
+
+#zapatos {
+  animation: animacioncajas 2.5s ease-in;
+  background-image: linear-gradient(to top, rgba(68, 129, 235, 0.582) 0%, rgba(4, 192, 254, 0.589) 100%), url("../imagenes/zapatos2.jpg");
+  animation-delay: 0s; }
+
+#ofertas {
+  animation: animacioncajas 4s ease-in-out;
+  background-image: linear-gradient(to top, rgba(27, 163, 70, 0.5) 0%, rgba(173, 168, 61, 0.582) 100%), url("../imagenes/ofertas.jpg");
+  animation-delay: 0s; }
+
+@keyframes animacioncajas {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/*---------Sección dedicada a la distribución de los links----------*/
+/*Esta sección de código está dedicada a los tres iconos de la pestaña productos*/
+.fa-tshirt {
+  color: black; }
+  .fa-tshirt:hover {
+    color: rgba(255, 0, 106, 0.945);
+    transition: 0.5s ease-out; }
+
+.fa-shoe-prints {
+  color: black; }
+  .fa-shoe-prints:hover {
+    color: rgba(0, 119, 255, 0.753);
+    transition: 0.5s ease-out; }
+
+.fa-bolt {
+  color: black; }
+  .fa-bolt:hover {
+    color: rgba(255, 255, 0, 0.925);
+    transition: 0.5s ease-out; }
+
+/*---------------------------------------------FIN DE CÓDIGO DE PESTAÑA PRODUCTOS-----------*/
+/*---------------------------------INICIO DEL CÓDIGO DE LA PESTAÑA CONTACTO-------------------------------------- */
+/*El siguiente código esta dedicado a la sección de la caja del titulo de contacto*/
+.contacto__titulo {
+  background: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
+  display: flex;
+  flex-direction: column;
+  height: 25vh;
+  justify-content: center; }
+  .contacto__titulo h1 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgba(255, 255, 255, 0.911); }
+
+h2 {
+  font-family: 'Montserrat', sans-serif !important;
+  color: rgba(255, 255, 255, 0.911); }
+
+/*------*/
+/*El siguiente código esta dedicado a el form de la pestaña contacto*/
+.contacto__formEnvoltura {
+  position: relative;
+  top: 15%;
+  bottom: 15%;
+  width: 100%;
+  max-width: 550px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  margin-bottom: 25px; }
+
+.contacto__formTitulo h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 25px; }
+
+.contacto__formContainer {
+  display: flex; }
+
+.contacto__formInputs {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+  width: 48%; }
+
+.msg {
+  width: 48%; }
+
+.contacto__formInputs .input {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color: #c5ecfd;
+  width: 100%; }
+
+.msg textarea {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color: #c5ecfd;
+  width: 100%;
+  height: 212px; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #c5ecfd; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c5ecfd; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #c5ecfd; }
+
+.btn {
+  background: #39b7dd;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase; }
+
+.contacto__formBackground {
+  background: url("../imagenes/fondoform.jpg") no-repeat top center;
+  background-size: cover;
+  height: 92vh; }
+
+/*Fin de Código de pestaña Contacto*/
+/*Inicio de Código de Seccion de preguntas de FAQ*/
+/*Código dedicado a la caja del título de FAQ*/
+#tituloFAQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 25vh; }
+  #tituloFAQ h1 {
+    color: rgba(255, 255, 255, 0.911); }
+  #tituloFAQ h2 {
+    animation: animacionfaq 2s ease-in; }
+
+h2 {
+  animation: animacionfaq 2s ease-in; }
+
+@keyframes animacionfaq {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/*----------------*/
+/*-----------Fondo dedicado a el fondo de FAQ---------------*/
+#fondoPreg {
+  background-image: linear-gradient(to bottom, rgba(113, 42, 229, 0.541) 0%, rgba(229, 178, 202, 0.575) 100%), url("../imagenes/closet.jpg");
+  background-size: cover;
+  height: 78vh;
+  display: flex;
+  align-items: center; }
+
+/*Codigo dedicado a las cajas de preguntas de la sección faq*/
+.accordion-container {
+  height: 40vh;
+  width: 90vw; }
+
+.ac {
+  height: 90px;
+  border-radius: 20px; }
+
+.ac-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 23px !important; }
+
+.ac-trigger {
+  font-family: 'Montserrat', sans-serif !important;
+  color: #f7f7f7 !important; }
+
+.ac {
+  background-color: black !important; }
+
+.ac-text {
+  color: white !important;
+  font-family: 'Montserrat', sans-serif !important; }
+
+.ac-trigger:focus {
+  outline: none;
+  box-shadow: none; }
+
+/*--------------------------*/
+/*------------------------Inicio de Código de pestaña clientes--------------------------*/
+/*----------------------CODIGO DE TITULO DE CLIENTES--------------------*/
+.tituloClientes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  height: 25vh; }
+  .tituloClientes h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.911); }
+
+/*------------------------------------------------------------------*/
+.containerCartas {
+  margin: 65px; }
+  .containerCartas small {
+    color: #fff !important; }
+
+/*Codigo dedicado al footer*/
+footer {
+  color: #fff;
+  background-color: #17a2b8;
+  padding: 10px;
+  height: 350px;
+  display: block; }
+  footer h3 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 30px; }
+  footer h5 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 30px; }
+
+.footerInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .footerInfo h4 {
+    margin-top: 20px; }
+
+/*------------------CODIGO DEDICADO A LA SECCION CONTACTO DEL FOOTER--------------*/
+#contacto i {
+  margin-top: 15px; }
+
+#contacto p {
+  font-family: 'Montserrat', sans-serif; }
+
+/*-----------------CODIGO DEDICADO A SECCIONES DEL FOOTER----------------*/
+#seccionesFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #seccionesFooter a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.925);
+    letter-spacing: 1px;
+    font-size: 15px; }
+    #seccionesFooter a:hover {
+      color: black;
+      transition: .3s; }
+
+/*-------------------------------------------------------------------*/
+/*---------------CODIGO DEDICADO A NUESTRAS REDES DEL FOOTER---------------------*/
+.fa-facebook, .fa-twitter, .fa-instagram {
+  color: black;
+  text-decoration: none; }
+
+.fa-twitter:hover {
+  color: white;
+  transition: 0.5s ease-out;
+  animation-delay: 0s; }
+
+.fa-facebook:hover {
+  color: #3b5998;
+  transition: 0.5s ease-out;
+  animation-delay: 0s; }
+
+.fa-instagram:hover {
+  color: #b61dca;
+  transition: 0.5s ease-out;
+  animation-delay: 0s; }
+
+#nuestrasRedes a {
+  float: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+  margin-right: 30px; }
+
+/*-----------------------Codigo dedicado a la responsividad------------------------*/
+/*--------------------Interactividad para celulares-------------------*/
+@media (max-width: 576px) {
+  footer {
+    height: 665px; }
+  .footerInfo {
+    display: flex;
+    flex-direction: column; }
+  #seccionesFooter a {
+    text-transform: uppercase; }
+    #seccionesFooter a:hover {
+      color: black;
+      margin: 10px; }
+  #tituloIndex h2 {
+    text-align: center; }
+  #productosEncabezado h1 {
+    font-size: 25px;
+    text-align: center; }
+  #productosEncabezado h2 {
+    font-size: 15px;
+    text-align: center; }
+  .links {
+    display: flex;
+    flex-direction: column; }
+  #ropa, #zapatos, #ofertas {
+    width: 70vw; }
+  .tituloClientes h1 {
+    font-size: 30px !important;
+    text-align: center; }
+  .tituloClientes h2 {
+    font-size: 22px; }
+  .contacto__titulo h1 {
+    font-size: 30px !important;
+    text-align: center; }
+  .contacto__titulo h2 {
+    font-size: 25px; }
+  .contacto__formContainer {
+    flex-direction: column; }
+  .msg textarea {
+    height: 80px; }
+  .contacto__formInputs, .msg {
+    width: 100%; }
+  .contacto__formEnvoltura {
+    top: 0%;
+    bottom: 0%; }
+  .contacto__formBackground {
+    background: url("../imagenes/fondoform.jpg") no-repeat top center;
+    background-size: cover;
+    height: 100vh; } }
+
+#tituloFAQ {
+  /*----------------------Interactividad para Tablets--------------------*/
+  /*-------------------------------Interactividad para Pantallas grandes-----------*/ }
+  #tituloFAQ h1 {
+    font-size: 32px;
+    text-align: center; }
+  #tituloFAQ h2 {
+    font-size: 20px;
+    text-align: center; }
+  @media (max-width: 800px) {
+    #tituloFAQ footer {
+      height: 665px; }
+    #tituloFAQ .footerInfo {
+      display: flex;
+      flex-direction: column; }
+    #tituloFAQ #seccionesFooter a {
+      text-transform: uppercase; }
+      #tituloFAQ #seccionesFooter a:hover {
+        color: black;
+        margin: 10px; }
+    #tituloFAQ #tituloIndex h1 {
+      text-align: center !important; }
+    #tituloFAQ #productosEncabezado h1 {
+      font-size: 25px;
+      text-align: center; }
+    #tituloFAQ #productosEncabezado h2 {
+      font-size: 20px; }
+    #tituloFAQ .links {
+      display: flex;
+      flex-direction: column; }
+    #tituloFAQ #ropa, #tituloFAQ #zapatos, #tituloFAQ #ofertas {
+      width: 70vw; }
+    #tituloFAQ .links {
+      display: flex;
+      flex-direction: column; }
+    #tituloFAQ #ropa, #tituloFAQ #zapatos, #tituloFAQ #ofertas {
+      width: 70vw; }
+    #tituloFAQ .tituloClientes h1 {
+      font-size: 30px !important;
+      text-align: center; }
+    #tituloFAQ .tituloClientes h2 {
+      font-size: 22px; }
+    #tituloFAQ .tituloClientes h1 {
+      font-size: 35px !important;
+      text-align: center; }
+    #tituloFAQ .tituloClientes h2 {
+      font-size: 20px; }
+    #tituloFAQ .contacto__titulo h1 {
+      font-size: 30px !important;
+      text-align: center; }
+    #tituloFAQ .contacto__titulo h2 {
+      font-size: 25px; }
+    #tituloFAQ #tituloFAQ h1 {
+      font-size: 32px;
+      text-align: center; }
+    #tituloFAQ #tituloFAQ h2 {
+      font-size: 23px;
+      text-align: center; }
+    #tituloFAQ .card-deck {
+      display: flex;
+      flex-direction: column; }
+    #tituloFAQ .card {
+      margin: 15px; } }
+  @media (max-width: 992px) {
+    #tituloFAQ #tituloIndex h1 {
+      text-align: center !important; }
+    #tituloFAQ .tituloClientes h1 {
+      font-size: 35px !important;
+      text-align: center; }
+    #tituloFAQ .tituloClientes h2 {
+      font-size: 25px; }
+    #tituloFAQ .card-deck {
+      display: flex;
+      flex-direction: column; }
+    #tituloFAQ .card {
+      margin: 10px; }
+    #tituloFAQ #productosEncabezado h1 {
+      font-size: 30px;
+      text-align: center; }
+    #tituloFAQ #productosEncabezado h2 {
+      font-size: 25px; } }
